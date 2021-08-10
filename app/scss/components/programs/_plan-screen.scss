@@ -39,7 +39,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../../../images/icons/check-green.png);
+    background-image: url(#{$assetPath}images/icons/check-green.png);
     width: 20px;
     height: 20px;
   }

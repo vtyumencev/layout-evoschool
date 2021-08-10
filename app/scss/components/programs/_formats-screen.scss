@@ -73,7 +73,7 @@
     position: absolute;
     top: 0;
     left: 10px;
-    background-image: url(../../../images/layout/price-cross.png);
+    background-image: url(#{$assetPath}images/layout/price-cross.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

@@ -29,7 +29,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background-image: url(../../../images/icons/steps-arrow.png);
+    background-image: url(#{$assetPath}images/icons/steps-arrow.png);
   }
   &__step:last-child:after {
     display: none;
