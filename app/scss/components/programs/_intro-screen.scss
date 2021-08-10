@@ -70,6 +70,7 @@
   }
   &__picture-img--border {
     border: 10px solid $color__white;
+    object-fit: cover;
   }
 }
 
