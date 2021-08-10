@@ -1,0 +1,106 @@
+@import "../../config/vars";
+
+.invite-screen {
+  margin: 200px 0 100px 0;
+  position: relative;
+
+  /* Profit - Experience */
+  
+  &__experience {
+    position: relative;
+  }
+  
+  &__text {
+    margin-top: 60px;
+    background-color: $color__accent-transparent;
+    width: 45vw;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  &__text-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__text-content {
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 180px 50px;
+  }
+  &__text-title {
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 5.6rem;
+  }
+  &__text-paragraph {
+    margin-top: 50px;
+    font-size: 3.6rem;
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__contacts-item {
+    display: flex;
+    margin: 16px 0;
+  }
+
+  &__contacts-icon {
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 34px;
+    margin-right: 20px;
+    margin-top: 3px;
+  }
+  &__contacts-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .invite-screen__text {
+    width: 80vw;
+  }
+  .invite-screen__text-content {
+    padding: 80px 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .invite-screen {
+    margin: 100px 0 50px 0;
+  }
+  .invite-screen__text-title {
+    font-size: 4rem;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .invite-screen__contacts-text {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .invite-screen__text-content {
+    padding: 30px 50px;
+  }
+}
+@media (max-width: 500px) {
+  .invite-screen {
+    margin: 50px 0 100px 0;
+  }
+  .invite-screen__text {
+    width: 90vw;
+  }
+  .invite-screen__text-content {
+    padding: 20px 30px;
+  }
+}

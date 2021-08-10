@@ -1,0 +1,84 @@
+@import "../../config/vars";
+
+
+.program-screen-2 {
+  margin-top: 100px;
+  &__container {
+    max-width: 1400px;
+  }
+  &__title {
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+  }
+  &__blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  &__block {
+    border: 5px solid #12aca1;
+  }
+  &__block-header {
+    text-align: center;
+    font-size: 4rem;
+    padding: 5px 20px;
+  }
+  &__block-num {
+    font-weight: 700;
+  }
+  &__block-title {
+    font-size: 3rem;
+    color: #808283;
+    font-weight: 700;
+  }
+  &__block-content {
+    margin-top: 50px;
+    padding: 40px;
+    font-size: 2.6rem;
+  }
+  &__block-picture {
+    padding: 40px;
+  }
+  &__block-content ol {
+    margin-left: 40px;
+  }
+  &__block-content ol li {
+    margin-bottom: 30px;
+  }
+  &__block-content ol li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 1000px) {
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+    &__block-header {
+      font-size: 3rem;
+    }
+    &__block-content {
+      font-size: 2rem;
+    }
+    &__block-title {
+      font-size: 2rem;
+    }
+    &__block-content, &__block-picture {
+      margin-top: 0;
+      padding: 20px;
+    }
+  }
+  @media (max-width: 800px) {
+    &__blocks {
+      gap: 20px;
+    }
+  }
+  @media (max-width: 600px) {
+    .program-screen-2__blocks {
+      grid-template-columns: 1fr;
+    }
+  }
+}

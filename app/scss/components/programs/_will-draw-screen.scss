@@ -1,0 +1,63 @@
+@import "../../config/vars";
+
+.will-draw-screen {
+  margin: 100px 0;
+  &__title {
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+  &__inner {
+    background: $color__substrate;
+    padding: 50px 0;
+  }
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 40px);
+  }
+  &__item-caption {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  &__item-picture {
+  }
+  &__item-img {
+
+  }
+
+  @media (max-width: 1300px) {
+    &__item {
+      width: calc(100% / 2 - 40px);
+    }
+  }
+  @media (max-width: 1000px) {
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+    &__item {
+      margin: 10px 5px;
+      width: calc(100% / 2 - 10px);
+    }
+    &__item-caption {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 600px) {
+    &__item {
+      width: 100%;
+    }
+  }
+}
+

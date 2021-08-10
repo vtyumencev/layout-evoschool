@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+  margin-bottom: 100px;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1810px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container--wide {
+  max-width: 1920px;
+}
+
+@import 'header.scss';
+@import 'footer.scss';

@@ -1,0 +1,96 @@
+@import "../config/vars";
+
+
+.footer {
+  padding: 70px 0;
+  background: $color__accent-light;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 3rem;
+  }
+  &__social-list {
+    margin-top: 50px;
+    display: inline-grid;
+    grid-auto-flow: column;
+    gap: 10px;
+  }
+  &__highlight {
+    color: $color__white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  &__highlight a {
+    color: $color__white;
+  }
+
+  &__social-icon {
+    width: 60px;
+  }
+  &__legal {
+    margin-top: 100px;
+  }
+
+  &__invite {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__book-button {
+    margin-top: 60px;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  &__disciplines {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+  .footer__contacts {
+    grid-column: 1 / 3;
+    order: -1;
+  }
+  .footer__book-button {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+  .footer__contacts {
+    grid-column: 1;
+  }
+  .footer__about {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__title {
+    text-align: center;
+  }
+  .footer__legal {
+    margin-top: 40px;
+  }
+}

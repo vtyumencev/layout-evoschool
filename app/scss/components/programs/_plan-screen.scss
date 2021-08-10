@@ -1,0 +1,97 @@
+@import "../../config/vars";
+
+.plan-screen {
+  margin-top: 50px;
+  &__title {
+    font-size: 6rem;
+    text-align: center;
+    color: $color__accent;
+    font-weight: 700;
+    margin-bottom: 100px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__flex {
+    flex: 1 0;
+  }
+  &__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    font-weight: 700;
+    margin-left: 20px;
+  }
+  &__about-list li {
+    margin-bottom: 20px;
+    font-size: 2.6rem;
+    position: relative;
+    padding-left: 30px;
+  }
+  &__about-list li:before {
+    content: '';
+    left: 0;
+    top: 8px;
+    display: block;
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../../images/icons/check-green.png);
+    width: 20px;
+    height: 20px;
+  }
+
+  &__picture {
+    margin-left: 20px;
+    align-self: stretch;
+    width: 40vw;
+  }
+  &__picture-inner {
+    position: relative;
+    height: 100%;
+  }
+  &__picture-img {
+    position: absolute;
+    object-fit: contain;
+    object-position: center top;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .plan-screen__picture-inner {
+    width: 100%;
+    max-width: none;
+  }
+  .plan-screen__title {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+  .plan-screen__inner {
+    flex-direction: column;
+  }
+  .plan-screen__picture {
+    margin-left: 0;
+    order: -1;
+    width: 100%;
+  }
+  .plan-screen__picture-img {
+    height: auto;
+    position: relative;
+  }
+  .plan-screen__about {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .plan-screen__picture-inner {
+    margin-top: 20px;
+  }
+}

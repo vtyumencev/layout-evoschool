@@ -1,0 +1,84 @@
+@import "../../config/vars";
+
+.dist-screen {
+  margin: 50px 0;
+  &__title {
+    text-align: center;
+  }
+  &__inner {
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+  }
+  &__background {
+    background: $color__accent-light;
+    position: absolute;
+    width: 76vw;
+    height: 100%;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    position: relative;
+    margin: 50px 0;
+  }
+
+
+  &__right-caption {
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid $color__dark;
+    background: $color__white;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color__white;
+    padding: 30px;
+    border: 1px solid $color__dark;
+  }
+  &__card-title {
+    flex-grow: 1;
+    margin-right: 30px;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .dist-screen__content {
+    grid-template-columns: 1fr;
+  }
+  .dist-screen__right-caption {
+    margin-top: 10px;
+  }
+  .dist-screen__cards {
+    margin-top: 60px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .dist-screen__inner {
+    margin-top: 50px;
+  }
+  .dist-screen__right-caption, .dist-screen__card-title {
+    font-size: 2rem;
+  }
+  .dist-screen__cards {
+    margin-top: 30px;
+  }
+}

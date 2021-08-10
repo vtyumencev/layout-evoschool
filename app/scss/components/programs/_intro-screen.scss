@@ -1,0 +1,114 @@
+@import "../../config/vars";
+
+.intro-screen {
+  margin-top: 50px;
+  background: $color__substrate;
+  padding: 30px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__flex {
+    flex: 1 0;
+  }
+  &__about {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__about-title {
+    font-family: "Playlist Script", Times, serif;
+    font-size: 9rem;
+    text-align: center;
+    color: $color__accent;
+  }
+  &__about-level {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: -10px;
+  }
+  &__about-subtitle {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 3rem;
+  }
+  &__about-subtitle--level-2 {
+    margin-top: 30px;
+  }
+  &__about-buttons {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__about-button {
+    margin-top: 10px;
+  }
+  &__about-warning {
+    color: #6d6e6e;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  &__picture {
+    align-self: stretch;
+  }
+  &__picture-inner {
+    position: relative;
+    max-width: 40vw;
+    height: 100%;
+  }
+  &__picture-img {
+    position: absolute;
+    object-fit: contain;
+    object-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+  &__picture-img--border {
+    border: 10px solid $color__white;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .intro-screen__picture-inner {
+    margin-top: 50px;
+    width: 100%;
+    max-width: none;
+  }
+  .intro-screen__inner {
+    flex-direction: column;
+  }
+  .intro-screen__picture-img {
+    height: auto;
+    position: relative;
+  }
+  .intro-screen__about {
+
+  }
+  .intro-screen__about-title {
+    margin-top: 20px;
+  }
+  .intro-screen__about-buttons {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .intro-screen__about-title {
+    font-size: 4rem;
+  }
+  .intro-screen__about-buttons {
+    margin-top: 20px;
+  }
+  .intro-screen__picture-inner {
+    margin-top: 20px;
+  }
+  .intro-screen__about-subtitle, .intro-screen__about-button {
+    font-size: 2rem;
+  }
+}

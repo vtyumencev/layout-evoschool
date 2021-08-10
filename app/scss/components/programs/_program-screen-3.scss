@@ -1,0 +1,118 @@
+@import "../../config/vars";
+
+$color__block-1: #1228ac;
+$color__block-2: #1b9ec4;
+$color__block-3: #12aca1;
+$color__block-4: #84cca6;
+
+.program-screen-3 {
+  margin: 100px 0;
+  &__title {
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+  &__blocks {
+    display: flex;
+
+  }
+  @media (max-width: 1000px) {
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+
+  }
+  @media (max-width: 1400px) {
+    &__block {
+      flex: 1 0;
+    }
+  }
+  @media (max-width: 800px) {
+    &__blocks {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.program-screen-3-block {
+  margin: 0 10px;
+  &__name {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    border: 5px solid;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  &__name:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 10px;
+    width: calc(100% + 10px);
+    left: -5px;
+    bottom: -40px;
+    background: #AAA;
+  }
+  &:nth-child(1) &__name, {
+    border-color: $color__block-1;
+  }
+  &:nth-child(1) &__name:after {
+    background-color: $color__block-1;
+  }
+  &:nth-child(2) &__name {
+    border-color: $color__block-2;
+  }
+  &:nth-child(2) &__name:after {
+    background-color: $color__block-2;
+  }
+  &:nth-child(3) &__name {
+    border-color: $color__block-3;
+  }
+  &:nth-child(3) &__name:after {
+    background-color: $color__block-3;
+  }
+  &:nth-child(4) &__name {
+    border-color: $color__block-4;
+  }
+  &:nth-child(4) &__name:after {
+    background-color: $color__block-4;
+  }
+  &__description {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  @media (min-width: 1400px) {
+    &__name br {
+      display: none;
+    }
+  }
+  @media (max-width: 1000px) {
+    &__name {
+      font-size: 2.4rem;
+    }
+    &__description {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 800px) {
+    margin: 10px 5px;
+    width: calc(100% / 2 - 10px);
+    flex-basis: auto;
+  }
+  @media (max-width: 400px) {
+    width: 100%;
+    margin: 20px 0;
+    &__name {
+      margin-bottom: 30px;
+    }
+    &__name:after {
+      bottom: -20px;
+      height: 5px;
+    }
+  }
+}

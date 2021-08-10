@@ -1,0 +1,26 @@
+@import "../../config/vars";
+
+.result-photo-screen {
+  margin-top: 100px;
+  &__title {
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+  }
+  &__picture {
+    display: flex;
+    justify-content: center;
+  }
+  &__picture--min &__img {
+    max-width: 1200px;
+    width: 100%;
+  }
+  @media (max-width: 1000px) {
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+  }
+}

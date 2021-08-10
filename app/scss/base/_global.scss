@@ -1,0 +1,63 @@
+@import '../config/vars';
+
+:root {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	height: 100%;
+	font-size: 2rem;
+	font-family: 'Century Gothic', sans-serif;
+	color: $color__dark;
+	background: #FFFFFF;
+}
+a {
+	color: $color__dark;
+	text-decoration: none;
+	transition: color 0.4s;
+}
+a:hover {
+	color: $color__dark;
+}
+
+input,
+button,
+textarea,
+select {
+	font-family: 'Century Gothic', sans-serif;
+	font-size: 2rem;
+	border: 1px solid gray;
+}
+input:focus,
+textarea:focus,
+select:focus {
+	box-shadow: $focus-outline__accent;
+	outline: none;
+}
+textarea {
+	resize: vertical;
+}
+
+
+.h2-title {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 6rem;
+	font-weight: normal;
+}
+
+
+
+
+@media (max-width: 600px) {
+	.h2-title {
+		font-size: 4rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.h2-title {
+		font-size: 3rem;
+	}
+}
+

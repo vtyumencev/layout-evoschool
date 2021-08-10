@@ -1,0 +1,153 @@
+@import "../../config/vars";
+
+.teachers-screen {
+  padding-top: 250px;
+
+
+  &__controllers {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    width: 60%;
+  }
+  &__controller-button {
+    border: none;
+    cursor: pointer;
+  }
+  &__controller-button:after {
+    content: '';
+    border: solid #a3a3a3;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 20px;
+    transition: 0.2s;
+  }
+  &__controller-button:hover:after {
+    border-color: $color__dark;
+  }
+  &__controller-button--prev:after {
+    transform: rotate(135deg) translateY(-4px);
+  }
+  &__controller-button--next:after {
+    transform: rotate(-45deg) translateY(4px);
+  }
+  &__progress {
+    position: relative;
+    height: 2px;
+    background: #a3a3a3;
+    width: 100%;
+  }
+  &__progress-fill {
+    position: absolute;
+    height: 12px;
+    width: 100%;
+    top: -13px;
+    background: $color__accent-transparent;
+    transition: 0.05s linear;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+  }
+}
+
+.teacher-slide {
+  position: relative;
+  &__about-container {
+    width: 60%;
+    position: relative;
+    z-index: 1;
+  }
+  &__name {
+    font-size: 6rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  &__status {
+    margin-top: 20px;
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+  }
+  &__description {
+    margin-top: 10px;
+    padding: 80px 0;
+    background-color: $color__accent-transparent;
+    font-size: 3.2rem;
+  }
+
+  &__description p.sub-description {
+    margin-top: 80px;
+    color: #717171;
+  }
+
+  &__photo-wrapper {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  &__photo {
+    position: absolute;
+    width: 35%;
+    right: 0;
+    bottom: -20%;
+    margin-right: 50px;
+  }
+  &__image {
+    border: 5px solid $color__white;
+  }
+
+}
+
+
+@media (max-width: 1200px) {
+  .teachers-screen {
+    padding-top: 100px;
+  }
+  .teacher-slide__name {
+    font-size: 4rem;
+  }
+  .teacher-slide__status {
+    margin-top: 5px;
+    font-size: 2.4rem;
+  }
+  .teacher-slide__description {
+    font-size: 2.4rem;
+  }
+  .teacher-slide__photo {
+    bottom: 0;
+    top: 0;
+  }
+  .teacher-slide__about-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 900px) {
+  .teacher-slide__photo {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  p.teacher-slide__about-container {
+    width: 100%;
+  }
+  .teacher-slide__photo {
+    top: -50px;
+  }
+  .teacher-slide__name {
+    font-size: 3rem;
+  }
+  .teacher-slide__status {
+    font-size: 2rem;
+  }
+  .teachers-screen__controllers {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .teacher-slide__description {
+    font-size: 2rem;
+  }
+}

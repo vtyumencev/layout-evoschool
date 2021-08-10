@@ -1,0 +1,53 @@
+@import "../../config/vars";
+
+.program-text-screen {
+  margin-top: 100px;
+  &__container {
+    max-width: 1400px;
+  }
+  &__title {
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  &__content {
+    border: 8px solid #84cca6;
+    padding: 20px 80px;
+  }
+  &__text {
+    font-size: 5rem;
+  }
+  &__text ul li {
+    margin: 30px 0;
+  }
+  &__text ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 800px) {
+    &__title {
+      font-size: 4rem;
+      margin-bottom: 30px;
+    }
+    &__content {
+      padding: 20px 20px;
+    }
+    &__text {
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 400px) {
+    &__title {
+      font-size: 3rem;
+    }
+    &__content {
+      padding: 10px;
+    }
+    &__text {
+      font-size: 2rem;
+    }
+  }
+}
+

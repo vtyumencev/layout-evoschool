@@ -1,0 +1,120 @@
+@import "../../config/vars";
+
+.formats-screen {
+  margin-top: 100px;
+  &__container {
+    max-width: 1400px;
+  }
+  &__title {
+    font-size: 6rem;
+    text-align: center;
+    color: $color__accent;
+    font-weight: 700;
+    margin-bottom: 100px;
+  }
+  &__items {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 20px;
+  }
+  &__item {
+    background: $color__accent-light;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__item-title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__item-possibilities {
+    margin-top: 20px;
+  }
+  &__item-possibilities li {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__item-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  &__item-price-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+  }
+  &__item-price,
+  &__item-button {
+    background: $color__accent;
+    color: $color__white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+  &__item-button--button {
+    cursor: pointer;
+  }
+  &__item-button--crossed {
+    color: $color__dark;
+    position: relative;
+  }
+  &__item-button--crossed:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-image: url(../../../images/layout/price-cross.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  &__item-price {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .formats-screen__item {
+    padding: 20px 10px;
+  }
+  .formats-screen__item-title {
+    font-size: 3rem;
+  }
+  .formats-screen__item-possibilities li {
+    font-size: 2rem;
+  }
+  .formats-screen__item-button {
+    font-size: 1.6rem;
+    padding: 8px 16px;
+  }
+  .formats-screen__item-price {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .formats-screen__title {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+  .formats-screen__items {
+    grid-auto-flow: row;
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+
+}

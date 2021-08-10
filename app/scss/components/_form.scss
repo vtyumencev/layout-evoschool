@@ -1,0 +1,44 @@
+@import "../config/vars";
+@import "../mixins/utilities";
+
+.feedback-form {
+  &__field {
+    display: block;
+    margin: 20px 0;
+  }
+  &__field-caption {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+  &__input {
+    width: 100%;
+    font-size: 2.6rem;
+    font-style: italic;
+    padding: 5px;
+  }
+  &__submit-area {
+    align-self: center;
+  }
+  &__submit-button {
+    font-size: 2.6rem;
+    background: gray;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    color: $color__white;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  &__submit-button:hover {
+    box-shadow: 3px 3px 0 $color__dark;
+  }
+
+  @media (max-width: 500px) {
+    &__field-caption,
+    &__submit-button,
+    &__input {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+@import '../config/vars';
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 40px 0;
+  align-items: flex-end;
+  column-gap: 20px;
+
+  &__about {
+    display: flex;
+  }
+  &__about-inner {
+
+  }
+  &__title {
+    font-weight: 400;
+    text-align: center;
+    font-size: 3rem;
+  }
+  &__social-list {
+    margin-top: 50px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__social-icon {
+    width: 60px;
+  }
+
+  /* Logo */
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__logo-img {
+    max-height: 200px;
+  }
+
+  /* Contacts */
+
+  &__contacts {
+    display: flex;
+    justify-self: flex-end;
+  }
+  &__contacts-inner {
+  }
+  &__callback {
+    margin-top: 30px;
+  }
+  &__telephone {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+  }
+  &__callback-button {
+
+  }
+}
+
+/* Navigation */
+
+.header-navigation {
+  &__menu {
+    margin: 100px 20px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__menu--right {
+    right: 0;
+  }
+  &__menu-line {
+    width: 2px;
+    background: $color__dark;
+    height: 400px;
+  }
+  &__menu-title {
+    writing-mode: vertical-rl;
+    margin: 5px 0;
+    transform: rotate(180deg);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.2rem;
+  }
+  &__menu--right &__menu-line {
+    margin-left: 10px;
+    height: 400px;
+  }
+
+  &__social-list {
+
+  }
+  &__social-item {
+    margin-bottom: 20px;
+  }
+  &__social-icon {
+    width: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__title {
+    font-size: 2rem;
+  }
+  .header__social-icon {
+    width: 40px;
+  }
+  .header__telephone {
+    font-size: 2rem;
+  }
+  .header__callback-button {
+    font-size: 1.8rem;
+    padding: 10px 10px;
+  }
+  .header-navigation__menu {
+    margin: 100px 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 10px;
+  }
+  .header__social-list, .header__callback {
+    margin-top: 10px;
+  }
+  .header__logo {
+    order: -1;
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__social-icon {
+    width: 30px;
+  }
+  .header__title, .header__callback-button {
+    font-size: 1.6rem;
+  }
+}

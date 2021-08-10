@@ -1,0 +1,105 @@
+@import "../../config/vars";
+
+.course-card {
+  margin-top: 50px;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__flex {
+    flex: 1 0;
+  }
+  &__about {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__about-type {
+    font-size: 3rem;
+  }
+  &__about-title {
+    margin-top: 50px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__about-subtitle {
+    margin-top: 20px;
+    text-align: center;
+  }
+  &__about-view-text {
+    margin-top: 50px;
+    font-weight: 700;
+
+  }
+  &__about-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__about-button {
+    margin-top: 10px;
+  }
+
+  &__picture {
+    align-self: stretch;
+  }
+  &__picture-inner {
+    position: relative;
+    max-width: 40vw;
+    height: 100%;
+  }
+  &__picture-substrate {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $color__accent-light;
+  }
+  &__picture-img {
+    height: calc( 100% - 60px );
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    border-left: 5px solid $color__white;
+    border-bottom: 3px solid $color__white;
+    border-top: 3px solid $color__white;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .course-card__picture-inner {
+    width: 100%;
+    max-width: none;
+    padding-top: 100%;
+  }
+  .course-card__inner {
+    flex-direction: column;
+  }
+  .course-card__picture-img {
+    width: calc(100% - 50px);
+    left: 25px;
+    border: 3px solid $color__white;
+  }
+  .course-card__about {
+    margin-top: 50px;
+  }
+  .course-card__about-title {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .course-card__about-title {
+    font-size: 4rem;
+  }
+}

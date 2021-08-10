@@ -1,0 +1,132 @@
+@import "../../config/vars";
+
+.result-screen {
+  margin-top: 500px;
+  position: relative;
+
+  &__chair {
+    position: absolute;
+    margin-top: -500px;
+    margin-left: 100px;
+  }
+  &__chair img {
+    width: 385px;
+    opacity: 0.5;
+  }
+
+  &__background {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 33vw;
+    background: $color__accent-transparent;
+  }
+
+  &__content {
+    z-index: 5;
+    display: flex;
+    position: relative;
+    padding: 30px 0 100px 0;
+  }
+  &__flex {
+    flex: 1 0;
+  }
+  &__examples {
+    position: relative;
+  }
+  &__examples-title {
+    font-weight: 700;
+  }
+  &__photo {
+    margin-top: 80px;
+    border: 5px solid $color__white;
+  }
+  &__examples-buttons {
+    margin-top: 100px;
+  }
+  &__examples-button {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 3.5rem;
+    padding: 16px 60px;
+  }
+
+
+  /* Reviews */
+  &__reviews {
+    margin-left: 30px;
+  }
+
+  &__reviews-title {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__review {
+    margin-top: 80px;
+    display: flex;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  &__review-photo {
+    flex-shrink: 0;
+    margin-right: 30px;
+    width: 200px;
+  }
+
+  &__review-block-text {
+
+  }
+  &__review-name {
+    font-size: 3rem;
+  }
+  &__review-link {
+    font-size: 2.6rem;
+  }
+  &__review-link a {
+    color: $color__link;
+    word-break: break-word;
+  }
+  &__review-text {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .result-screen__review-photo {
+    width: 100px;
+  }
+}
+@media (max-width: 800px) {
+  .result-screen__background {
+    width: 100%;
+  }
+  .result-screen__content {
+    flex-direction: column;
+  }
+  .result-screen__examples-buttons {
+    margin-top: 30px;
+  }
+  .result-screen__examples-button {
+    display: block;
+  }
+  .result-screen__reviews {
+    margin-top: 100px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 400px) {
+  .result-screen__review-name, .result-screen__review-link {
+    font-size: 2rem;
+  }
+  .result-screen__review-text {
+    font-size: 1.6rem;
+  }
+  .result-screen__review-photo {
+    width: 80px;
+    margin-right: 20px;
+  }
+}

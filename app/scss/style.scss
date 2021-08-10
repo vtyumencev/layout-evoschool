@@ -1,0 +1,38 @@
+@import 'config/vars';
+@import 'mixins/utilities';
+
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/libs';
+@import 'base/global';
+
+
+@import 'elements/buttons';
+
+@import 'layout/layout';
+
+@import 'components/form';
+
+@import 'components/front-page/course-card';
+@import 'components/front-page/dist-screen';
+@import 'components/front-page/profit-screen';
+@import 'components/front-page/teachers-screen';
+@import 'components/front-page/result-screen';
+@import 'components/front-page/invite-screen';
+
+
+@import 'components/programs/intro-screen';
+@import 'components/programs/program-screen-1';
+@import 'components/programs/program-screen-2';
+@import 'components/programs/program-screen-3';
+@import 'components/programs/plan-screen';
+@import 'components/programs/formats-screen';
+@import 'components/programs/samples-screen';
+@import 'components/programs/whom-screen';
+@import 'components/programs/result-photo-screen';
+@import 'components/programs/feedback-screen';
+@import 'components/programs/benefits-screen';
+@import 'components/programs/will-draw-screen';
+@import 'components/programs/steps-screen';
+@import 'components/programs/program-text-screen';
+

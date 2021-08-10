@@ -1,0 +1,59 @@
+@import "../../config/vars";
+
+.feedback-screen {
+  &__content {
+    display: flex;
+  }
+  &__flex {
+    flex: 1 0;
+  }
+  &__form-title {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &__form-subtitle {
+    margin-top: 30px;
+    font-size: 4rem;
+  }
+  &__form-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+  }
+  &__picture {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  &__picture-img {
+    max-width: 500px;
+    width: 100%;
+    height: fit-content;
+  }
+  &__submit-area {
+    align-self: center;
+    margin-bottom: 50px;
+  }
+  &__submit-button {
+
+  }
+
+  @media (max-width: 800px) {
+    .feedback-screen__picture {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .feedback-screen__form-title {
+    font-size: 4rem;
+  }
+  .feedback-screen__form-subtitle {
+    font-size: 2.6rem;
+  }
+}
