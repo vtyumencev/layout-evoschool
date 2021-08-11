@@ -82,6 +82,12 @@
     background: $color__dark;
     height: 400px;
   }
+  &--t2 &__menu-line {
+    height: 600px;
+  }
+  &--t3 &__menu-line {
+    height: 1100px;
+  }
   &__menu-title {
     writing-mode: vertical-rl;
     margin: 5px 0;
@@ -92,6 +98,9 @@
   &__menu--right &__menu-line {
     margin-left: 10px;
     height: 400px;
+  }
+  &--t2 &__menu--right &__menu-line {
+    height: 500px;
   }
 
   &__social-list {

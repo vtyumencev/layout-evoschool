@@ -47,6 +47,8 @@ $color__block-4: #84cca6;
     border: 5px solid;
     margin-bottom: 50px;
     position: relative;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
   &__name:after {
     content: '';
@@ -85,6 +87,12 @@ $color__block-4: #84cca6;
   &__description {
     text-align: center;
     font-size: 2.4rem;
+  }
+  @media (max-width: 1700px) {
+    &__name {
+      margin-left: 0.5vw;
+      margin-right: 0.5vw;
+    }
   }
   @media (min-width: 1400px) {
     &__name br {

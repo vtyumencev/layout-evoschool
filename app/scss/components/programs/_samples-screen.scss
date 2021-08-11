@@ -25,6 +25,9 @@
     font-size: 5rem;
     text-align: center;
   }
+  &__items--bold-captions &__item-caption {
+    font-weight: 700;
+  }
   &__group {
     grid-column: span 2;
   }
