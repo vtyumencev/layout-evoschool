@@ -1,0 +1,41 @@
+@import "../config/vars";
+@import "../mixins/utilities";
+
+.modal-content {
+  border: none;
+  border-radius: 0;
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal-body {
+  padding: 0 30px 30px 30px;
+}
+
+.feedback-modal {
+  &__title {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 3rem;
+  }
+  &__intro {
+    margin: 20px 0 30px 0;
+    text-align: center;
+  }
+  &__field-name {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+  &__input {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  &__submit-button {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 2rem;
+  }
+}

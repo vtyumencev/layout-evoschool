@@ -23,17 +23,17 @@
               <div class="header__social">
                 <ul class="header__social-list">
                   <li class="header__social-item">
-                    <a class="header__social-link" href="." title="Email">
+                    <a class="header__social-link" href="mailto:evo_school@mail.ru" title="Email">
                       <img class="header__social-icon" src="images/icons/email-white.png" alt="">
                     </a>
                   </li>
                   <li class="header__social-item">
-                    <a class="header__social-link" href="." title="Вконтакте">
+                    <a class="header__social-link" href="https://vk.com/evolutionschool" title="Вконтакте">
                       <img class="header__social-icon" src="images/icons/vk-white.png" alt="">
                     </a>
                   </li>
                   <li class="header__social-item">
-                    <a class="header__social-link" href="." title="Instagram">
+                    <a class="header__social-link" href="https://instagram.com/evo_school/" title="Instagram">
                       <img class="header__social-icon" src="images/icons/ig-white.png" alt="">
                     </a>
                   </li>
@@ -43,7 +43,7 @@
           </div>
 
           <div class="header__logo">
-            <img class="header__logo-img" src="images/logo.png" alt="">
+            <a href="/"><img class="header__logo-img" src="images/logo.png" alt=""></a>
           </div>
 
           <div class="header__contacts">
@@ -52,7 +52,12 @@
                 <a class="header__telephone-link" href="tel:+79525222370">+7 952 522 23 70</a>
               </div>
               <div class="header__callback">
-                <div class="header__callback-button button">Заказать звонок</div>
+                <button
+                        class="header__callback-button button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#feedback-modal"
+                        data-modal-title="Заказ звонка"
+                        data-modal-button-id="call-back--header">Заказать звонок</button>
               </div>
             </div>
           </div>
@@ -64,17 +69,17 @@
           <div class="header-navigation__social">
             <ul class="header-navigation__social-list">
               <li class="header-navigation__social-item">
-                <a class="header-navigation__social-link" href="." title="Email">
+                <a class="header-navigation__social-link" href="mailto:evo_school@mail.ru" title="Email">
                   <img class="header-navigation__social-icon" src="images/icons/email-dark.png" alt="">
                 </a>
               </li>
               <li class="header-navigation__social-item">
-                <a class="header-navigation__social-link" href="." title="Вконтакте">
+                <a class="header-navigation__social-link" href="https://vk.com/evolutionschool" target="_blank" title="Вконтакте">
                   <img class="header-navigation__social-icon" src="images/icons/vk-dark.png" alt="">
                 </a>
               </li>
               <li class="header-navigation__social-item">
-                <a class="header-navigation__social-link" href="." title="Instagram">
+                <a class="header-navigation__social-link" href="https://instagram.com/evo_school/" target="_blank" title="Instagram">
                   <img class="header-navigation__social-icon" src="images/icons/ig-dark.png" alt="">
                 </a>
               </li>
@@ -138,14 +143,14 @@
             <div class="dist-screen__content">
               <div class="dist-screen__flex dist-screen__left">
                 <img class="dist-screen__right-img" src="images/layout/dist-1.png" alt="">
-                <div class="dist-screen__right-caption">
+                <a class="dist-screen__right-caption" href="/base.html">
                   Базовый Курс Дизайна Интерьера<br>
                   Я - дизайнер
-                </div>
+                </a>
               </div>
               <div class="dist-screen__flex dist-screen__right">
                 <div class="dist-screen__cards">
-                  <div class="dist-screen__card">
+                  <a class="dist-screen__card" href="/sketch.html">
                     <div class="dist-screen__card-title">
                       Интерьерный<br>
                       скетч
@@ -153,8 +158,8 @@
                     <div class="dist-screen__card-picture">
                       <img src="images/layout/dist-2.png" alt="">
                     </div>
-                  </div>
-                  <div class="dist-screen__card">
+                  </a>
+                  <a class="dist-screen__card" href="/pro.html">
                     <div class="dist-screen__card-title">
                       Дизайн<br>
                       Интерьера<br>
@@ -163,7 +168,7 @@
                     <div class="dist-screen__card-picture">
                       <img src="images/layout/dist-3.png" alt="">
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -507,17 +512,17 @@
           <div class="footer__social">
             <ul class="footer__social-list">
               <li class="footer__social-item">
-                <a class="footer__social-link" href="." title="Email">
+                <a class="footer__social-link" href="mailto:evo_school@mail.ru" title="Email">
                   <img class="footer__social-icon" src="images/icons/email-accent.png" alt="">
                 </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link" href="." title="Вконтакте">
+                <a class="footer__social-link" href="https://vk.com/evolutionschool" target="_blank" title="Вконтакте">
                   <img class="footer__social-icon" src="images/icons/vk-accent.png" alt="">
                 </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link" href="." title="Instagram">
+                <a class="footer__social-link" href="https://instagram.com/evo_school/" target="_blank" title="Instagram">
                   <img class="footer__social-icon" src="images/icons/ig-accent.png" alt="">
                 </a>
               </li>
@@ -534,29 +539,64 @@
         </div>
 
         <div class="footer__invite">
-            <div class="footer__highlight">Мы ждем всех, от новичков до профессионалов!</div>
-            <button class="footer__book-button button">Забронировать место</button>
-            <div class="footer__disciplines">
-              <ul class="footer__disciplines-list">
-                <li>дизайн интерьера (база) очно;</li>
-                <li>дизайн интерьера pro очно;</li>
-                <li>я - дизайнер дистанционно;</li>
-                <li>дизайн интерьера pro дистанционно</li>
-                <li>интерьерный скетч дистанционно</li>
-              </ul>
-            </div>
+          <div class="footer__highlight">Мы ждем всех, от новичков до профессионалов!</div>
+          <button class="footer__book-button button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#feedback-modal"
+                  data-modal-title="Бронирование места"
+                  data-modal-button-id="call-back--footer">Забронировать место</button>
+          <div class="footer__disciplines">
+            <ul class="footer__disciplines-list">
+              <li>дизайн интерьера (база) очно;</li>
+              <li>дизайн интерьера pro очно;</li>
+              <li>я - дизайнер дистанционно;</li>
+              <li>дизайн интерьера pro дистанционно</li>
+              <li>интерьерный скетч дистанционно</li>
+            </ul>
+          </div>
         </div>
 
         <div class="footer__contacts">
           <div class="footer__highlight">
             <a href="tel:+79525222370" title="Номер телефона">+7 952 522 23 70</a>
           </div>
-          <div class="footer__book-button button">Заказать звонок</div>
+          <button class="footer__book-button button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#feedback-modal"
+                  data-modal-title="Заказ звонка"
+                  data-modal-button-id="call-back--footer">Заказать звонок</button>
         </div>
 
       </div>
     </footer>
+  </div>
 
+  <div class="modal fade feedback-modal" id="feedback-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="feedback-modal__title"></h5>
+          <div class="feedback-modal__intro">
+            Оставьте ваш номер телефона и мы перезвоним
+          </div>
+          <form class="feedback-form">
+            <input type="hidden" name="page" value="Главная страница">
+            <input type="hidden" name="target-button-id" value="">
+            <input type="hidden" name="form-name" value="">
+            <input type="hidden" name="form-description" value="">
+            <label>
+              <span class="feedback-modal__field-name">Ваш номер телефона:</span>
+              <input class="feedback-modal__input" type="tel" name="phone" required>
+            </label>
+            <button class="feedback-modal__submit-button button" type="submit">Отправить</button>
+            <div class="feedback-form__msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/main.min.js"></script>

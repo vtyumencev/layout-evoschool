@@ -6,7 +6,7 @@ $(function () {
                 pattern: /[+]/, optional: true
             }
         },
-        onKeyPress: function(cep, e, field, options) {
+        onKeyPress: function(cep, e, field) {
             if(cep.length === 1 && cep[0] === '9') {
                 field.val('+7 (9');
             }
@@ -22,12 +22,80 @@ $(function () {
             else if(cep.length === 1 && cep[0] !== '8' && cep[0] !== '+') {
                 field.val('');
             }
-        }
+        },
+        placeholder: '+7 (___) ___ __ __'
     };
     $('input[type="tel"]').mask('Z0 (000) 000-00-00', options);
 
+    /**
+     * Окно модальной связи
+     */
+
+    const modalEl = document.getElementById('feedback-modal')
+    modalEl.addEventListener('show.bs.modal', function (event) {
+        const relatedButton = event.relatedTarget
+        if(relatedButton.hasAttribute('data-modal-title')) {
+            this.querySelector('.feedback-modal__title').innerHTML = relatedButton.getAttribute('data-modal-title')
+        }
+        else {
+            this.querySelector('.feedback-modal__title').innerHTML = relatedButton.innerHTML
+        }
+
+        if(relatedButton.hasAttribute('data-modal-submit-caption')) {
+            this.querySelector('.feedback-modal__submit-button').innerHTML = relatedButton.getAttribute('data-modal-submit-caption')
+        }
+        else {
+            this.querySelector('.feedback-modal__submit-button').innerHTML = relatedButton.innerHTML
+        }
+
+        this.querySelector('input[name="target-button-id"]').value = relatedButton.getAttribute('data-modal-button-id')
+        this.querySelector('input[name="form-name"]').value = relatedButton.getAttribute('data-modal-title')
+        this.querySelector('input[name="form-description"]').value = relatedButton.getAttribute('data-modal-description')
+    })
 
 
+    /**
+     * Отправка формы
+     */
+    const feedbackFormElements = document.querySelectorAll('.feedback-form')
+    for(let feedbackFormEl of feedbackFormElements) {
+        feedbackFormEl.addEventListener('submit', function (event) {
+            feedbackFormEl.querySelector('.feedback-form__msg').classList.remove('show')
+            event.preventDefault()
+            if(!feedbackFormEl.classList.contains('disabled')) {
+                feedbackFormEl.classList.add('disabled')
+
+
+                fetch('https://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                    body: new FormData(feedbackFormEl)
+                })
+                    .then(response => {
+                        if(!response.ok) throw Error(response.status.toString())
+                        return response
+                    })
+                    .then(response => response.json())
+                    .then(response => {
+
+                        const feedbackFormFields = feedbackFormEl.querySelectorAll('label input, label textarea')
+                        for(let feedbackFormFieldEl of feedbackFormFields) {
+                            feedbackFormFieldEl.value = ''
+                        }
+
+                        feedbackFormEl.querySelector('.feedback-form__msg').classList.add('show')
+                        feedbackFormEl.querySelector('.feedback-form__msg').innerHTML = 'Заявка успешно отправлена'
+
+                        feedbackFormEl.classList.remove('disabled')
+                    }).catch(error => {
+                        alert('Произошла ошибка. Попробуйте ещё раз.')
+                    })
+            }
+        });
+    }
+
+    /*
+    Слайдеры
+     */
 
     // https://stackoverflow.com/a/36389263
     let getTimeout = function() {

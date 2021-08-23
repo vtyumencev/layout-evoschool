@@ -23,17 +23,17 @@
               <div class="header__social">
                 <ul class="header__social-list">
                   <li class="header__social-item">
-                    <a class="header__social-link" href="." title="Email">
+                    <a class="header__social-link" href="mailto:evo_school@mail.ru" title="Email">
                       <img class="header__social-icon" src="images/icons/email-white.png" alt="">
                     </a>
                   </li>
                   <li class="header__social-item">
-                    <a class="header__social-link" href="." title="Вконтакте">
+                    <a class="header__social-link" href="https://vk.com/evolutionschool" title="Вконтакте">
                       <img class="header__social-icon" src="images/icons/vk-white.png" alt="">
                     </a>
                   </li>
                   <li class="header__social-item">
-                    <a class="header__social-link" href="." title="Instagram">
+                    <a class="header__social-link" href="https://instagram.com/evo_school/" title="Instagram">
                       <img class="header__social-icon" src="images/icons/ig-white.png" alt="">
                     </a>
                   </li>
@@ -43,7 +43,7 @@
           </div>
 
           <div class="header__logo">
-            <img class="header__logo-img" src="images/logo.png" alt="">
+            <a href="/"><img class="header__logo-img" src="images/logo.png" alt=""></a>
           </div>
 
           <div class="header__contacts">
@@ -64,17 +64,17 @@
           <div class="header-navigation__social">
             <ul class="header-navigation__social-list">
               <li class="header-navigation__social-item">
-                <a class="header-navigation__social-link" href="." title="Email">
+                <a class="header-navigation__social-link" href="mailto:evo_school@mail.ru" title="Email">
                   <img class="header-navigation__social-icon" src="images/icons/email-dark.png" alt="">
                 </a>
               </li>
               <li class="header-navigation__social-item">
-                <a class="header-navigation__social-link" href="." title="Вконтакте">
+                <a class="header-navigation__social-link" href="https://vk.com/evolutionschool" target="_blank" title="Вконтакте">
                   <img class="header-navigation__social-icon" src="images/icons/vk-dark.png" alt="">
                 </a>
               </li>
               <li class="header-navigation__social-item">
-                <a class="header-navigation__social-link" href="." title="Instagram">
+                <a class="header-navigation__social-link" href="https://instagram.com/evo_school/" target="_blank" title="Instagram">
                   <img class="header-navigation__social-icon" src="images/icons/ig-dark.png" alt="">
                 </a>
               </li>
@@ -379,17 +379,17 @@
           <div class="footer__social">
             <ul class="footer__social-list">
               <li class="footer__social-item">
-                <a class="footer__social-link" href="." title="Email">
+                <a class="footer__social-link" href="mailto:evo_school@mail.ru" title="Email">
                   <img class="footer__social-icon" src="images/icons/email-accent.png" alt="">
                 </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link" href="." title="Вконтакте">
+                <a class="footer__social-link" href="https://vk.com/evolutionschool" target="_blank" title="Вконтакте">
                   <img class="footer__social-icon" src="images/icons/vk-accent.png" alt="">
                 </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link" href="." title="Instagram">
+                <a class="footer__social-link" href="https://instagram.com/evo_school/" target="_blank" title="Instagram">
                   <img class="footer__social-icon" src="images/icons/ig-accent.png" alt="">
                 </a>
               </li>
@@ -429,6 +429,28 @@
       </div>
     </footer>
 
+  </div>
+  <div class="modal fade feedback-modal" id="feedback-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="feedback-modal__title"></h5>
+          <div class="feedback-modal__intro">
+            Оставьте ваш номер телефона и мы перезвоним
+          </div>
+          <form id="feedback-form-modal">
+            <label>
+              <span class="feedback-modal__field-name">Ваш номер телефона:</span>
+              <input type="tel" class="feedback-modal__input" required>
+            </label>
+            <button class="feedback-modal__submit-button button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/main.min.js"></script>

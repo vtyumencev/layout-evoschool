@@ -27,12 +27,17 @@
 
 
   &__right-caption {
+    display: block;
     margin-top: 30px;
     padding: 30px;
     border: 1px solid $color__dark;
     background: $color__white;
     font-size: 3.5rem;
     text-align: center;
+    transition: 0.2s;
+  }
+  &__right-caption:hover {
+    box-shadow: 2px 2px 0 #04151e;
   }
 
   &__cards {
@@ -48,6 +53,10 @@
     background: $color__white;
     padding: 30px;
     border: 1px solid $color__dark;
+    transition: 0.2s;
+  }
+  &__card:hover {
+    box-shadow: 2px 2px 0 #04151e;
   }
   &__card-title {
     flex-grow: 1;
